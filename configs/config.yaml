@@ -1,0 +1,46 @@
+model:
+  num_classes: 1
+  backbone: resnet50
+  pretrained: true
+
+training:
+  epochs: 100
+  batch_size: 8
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  loss_alpha: 0.5
+  loss_beta: 0.5
+  early_stopping_patience: 10
+  early_stopping_min_delta: 0.001
+  num_workers: 4
+  pin_memory: true
+  shuffle: true
+  drop_last: true
+
+data:
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  image_size: [512, 512]
+  augmentations:
+    horizontal_flip: true
+    vertical_flip: true
+    rotation: 15
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0.1
+
+paths:
+  data: data/
+  checkpoints: checkpoints/
+  logs: logs/
+  results: results/
+  metrics: metrics/
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  tensorboard: true
+  save_visualizations: true
+  visualization_frequency: 5  # Save visualizations every N epochs 

@@ -1,0 +1,54 @@
+paths:
+  data: data
+  checkpoints: checkpoints
+  logs: logs
+  results: "results/"
+
+model:
+  num_classes: 1
+  backbone: resnet50
+  pretrained: true
+
+data:
+  input_size: [512, 512]
+  test_size: 0.1
+  val_size: 0.1
+  edge_scale: 1.0
+  image_size: [512, 512]
+  test_split: 0.1
+  val_split: 0.1
+  augmentations:
+    enabled: true
+    horizontal_flip: true
+    vertical_flip: true
+    rotation: true
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0.1
+
+training:
+  batch_size: 16
+  num_workers: 8
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  momentum: 0.9
+  lr_scheduler: true
+  lr_patience: 5
+  early_stopping: true
+  early_stopping_patience: 10
+  early_stopping_min_delta: 0.001
+  max_train_samples: -1
+  max_val_samples: -1
+  max_test_samples: -1
+  num_visualization_samples: 5
+
+loss:
+  alpha: 0.5  # Dice weight
+  beta: 0.5   # BCE weight
+  gamma: 0.5  # Edge weight
+
+postprocessing:
+  min_size: 50      # Minimum grain size (pixels)
+  min_distance: 7   # Minimum distance between grains
