@@ -6,6 +6,7 @@ A PyTorch implementation of DeepLabv3Plus for semantic segmentation . This proje
 ```
 Note: depthwise separable convolutions and the Xception backbone are not included.
 ```
+<img width="2000" height="500" alt="vis_crop_34539" src="https://github.com/user-attachments/assets/40c97124-24ba-4a9d-aa1e-54b3a496d864" />
 
 ## Project Structure
 
