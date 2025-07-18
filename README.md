@@ -3,6 +3,9 @@
 ## Implementation of paper: https://arxiv.org/pdf/1802.02611
 
 A PyTorch implementation of DeepLabv3Plus for semantic segmentation . This project provides a robust solution for segmenting objects with high accuracy and includes features for monitoring training progress and model performance.
+```
+Note: depthwise separable convolutions and the Xception backbone are not included.
+```
 
 ## Project Structure
 
