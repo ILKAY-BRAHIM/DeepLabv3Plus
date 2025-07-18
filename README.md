@@ -1,6 +1,6 @@
-# DeepLabv3Plus for Phosphate Grain Segmentation
+# DeepLabv3Plus for semantic Segmentation
 
-A PyTorch implementation of DeepLabv3Plus for semantic segmentation of phosphate grains in microscopic images. This project provides a robust solution for segmenting phosphate grains with high accuracy and includes features for monitoring training progress and model performance.
+A PyTorch implementation of DeepLabv3Plus for semantic segmentation . This project provides a robust solution for segmenting objects with high accuracy and includes features for monitoring training progress and model performance.
 
 ## Project Structure
 
